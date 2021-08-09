@@ -6,11 +6,11 @@ const conexion = mysql.createConnection(database);
 
 conexion.connect((error) => {
 
-    if(error) throw error
-    
-    console.log("Se ha realizado la conexion");
-
-    return
+    if(error){
+        console.log('Error de conexion');
+    } else {
+        console.log("Se ha realizado la conexion");        
+    }
 
 })
 
